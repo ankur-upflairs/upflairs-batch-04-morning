@@ -1,0 +1,24 @@
+hyper text markup language=>
+is used to define the structure of a web page
+1. vs code 
+2. browser (chrome)
+
+tag=> tell the browser that what to display and how to display
+<p> 
+<tag_name >  opening tag
+</tag_name > closing tag
+<h1> heading tag 
+</h1>
+
+element => opening tag + content +closing tag
+eg. <p> this is a paragraph </p>
+
+attribute => to give some extra information about tag
+ in opening tag and after tag_name
+ attribute_name="value"
+
+//html ignores line breaks
+
+//html ignores multiple spaces
+character entity reference
+https://tools.w3cub.com/html-entities
