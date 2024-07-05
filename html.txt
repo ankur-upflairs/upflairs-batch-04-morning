@@ -22,3 +22,8 @@ attribute => to give some extra information about tag
 //html ignores multiple spaces
 character entity reference
 https://tools.w3cub.com/html-entities
+
+lists => 
+1. ordered list
+2. unordered list
+3. defintion list
