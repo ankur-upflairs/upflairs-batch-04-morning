@@ -1,0 +1,20 @@
+.header{
+    width: 90%;margin: 0px auto;
+    background-color: black;
+    height: 50px;
+    color: white;
+}
+.links{float: left;margin-left: 100px;margin-top: 15px;}
+.links a{color: white;text-decoration: none;
+    padding-right: 21px;
+    color: lightgrey;
+}
+.links button{
+    width: 85px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: #2596be;
+    color: lightgray;
+    border: none;
+}
+.brand{float: right;margin-right: 50px;margin-top: 15px;}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 150px;height: 150px;
+            background-color: red; border: 1px solid;
+            position: absolute;
+            /* top: 50px;
+            right: 50px; */
+            right: 10px;bottom: 10px;
+        }
+        .box2{ width: 150px;height: 150px;
+            background-color: green; border: 1px solid;
+            position: relative;
+            top: 100px;left: 100px;
+        }
+        .box3{ width: 150px;height: 150px;
+            position: fixed;
+            left: 10px;bottom: 10px;
+            background-color: crimson; border: 1px solid;}
+        .box4{ width: 150px;height: 150px;
+            position: sticky;
+            top: 20px;
+            background-color: blue; border: 1px solid;}
+        .box5{height: 1000px;}
+        .box6{
+            width: 400px;height: 400px;border: 1px solid;
+            margin: 0px auto;
+        }
+        .box7{
+            width: 40px;height: 40px;border: 1px solid;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0px;right: 0px;
+        }
+
+        .box6{
+            width: 400px;height: 400px;border: 1px solid;
+            margin: 0px auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class='box1'></div>
+    <div class='box2'></div>
+    <div class='box3'></div>
+    <div class='box4'></div>
+    <!-- <div class="box5"></div> -->
+    <div class="box6">
+        <div class="box7"></div>
+    </div>
+</body>
+</html>
