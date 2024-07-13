@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown-items{
+            display: none;
+        }
+        .drop-down:hover .dropdown-items{
+            display: block;
+        }
+        .navbar{
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .navbar li:hover{
+            color: red;
+            cursor: pointer;
+        }
+        .dd{
+            position: relative;
+        }
+        .item{
+            display: none;
+            position: absolute;
+            list-style: none;
+            left: -45px;
+            top: 20px;
+        }
+        .dd:hover .item{
+            display: block;
+        }
+        .item li{margin-top: 10px;}
+
+    </style>
+
+</head>
+<body>
+    <div class="drop-down">
+        <button>hover here to display drop-down</button>
+        <div class="dropdown-items">
+            <button>random text</button>
+            <button>random text</button>
+            <button>random text</button>
+            <button>random text</button>
+        </div>
+    </div>
+    <ul class="navbar">
+        <li>home</li>
+        <li>contact</li>
+        <li class="dd">services
+            <ul class="item">
+                <li>web development</li>
+                <li>app development</li>
+                <li>data science</li>
+            </ul>
+        </li>
+        <li>about</li>
+    </ul>
+</body>
+</html>

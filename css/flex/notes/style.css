@@ -1,0 +1,63 @@
+.container {
+    width: 80%;
+    margin: 0px auto;
+    height: 200px;
+    border: 1px solid;
+    display: flex;
+   transition: all 2s;
+}
+
+.items {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+}
+
+.item1 {
+    background-color: red;
+}
+
+.item2 {
+    background-color: green;
+}
+
+.item3 {
+    background-color: yellow;
+}
+
+.item4 {
+    background-color: blue;
+}
+ul{list-style: none;}
+li{display: inline-block; border: 1px solid ;padding: 10px 20px; cursor: pointer;}
+
+.wrap .container {
+    /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;
+}
+
+.wrap .items {
+    width: 50%;
+    box-sizing: border-box;
+}
+.justify .container{
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.align-items .container{flex-direction: row;
+/* align-items: stretch; */
+align-items: baseline;
+
+}
+.align-items .items{height: auto; text-decoration: underline;}
+.align-items .item2{font-size: 30px;}
+.align-content .container{
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+.align-content .items{
+    width: 50%;box-sizing: border-box;
+    
+}

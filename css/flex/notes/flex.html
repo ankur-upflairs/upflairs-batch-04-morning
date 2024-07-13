@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>what is flex ?</h3>
+    <p>flex is used to create layout of a webpage .flex is one dimensional arrangement of boxes</p>
+    <p>there should a outer box that is container and some inner boxes that are arranged by flex are known as items</p>
+    <p>container should apply display flex then all boxes are arranged in a row</p>
+    <p>properties are related to container :</p>
+    <div class="direction">
+        <h3>flex-direction</h3>
+        <ul>
+            <li>row</li>
+            <li>row-reverse</li>
+            <li>column</li>
+            <li>column-reverse</li>
+        </ul>
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items item2">2</div>
+            <div class="items item3">3</div>
+            <div class="items item4">4</div>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3>flex-wrap</h3>
+        <ul>
+            <li>nowrap</li>
+            <li>wrap</li>
+            <li>wrap-reverse</li>
+        </ul>
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items item2">2</div>
+            <div class="items item3">3</div>
+            <div class="items item4">4</div>
+        </div>
+    </div>
+    <h3>flex-flow</h3>
+    <p>this is combination of flex-direction and flex-wrap</p>
+    <h3>main axis</h3>
+    <p>main is an axis according to boxes lay</p>
+    <p>if direction is row or row-reverse then main axis is X-axis</p>
+    <p>if direction is column or column-reverse then main axis is Y-axis</p>
+    <img src="flex main-cross axis.png" alt="" width="600px">
+    <div class="justify">
+        <h3>justify-content</h3>
+        <p>this arranges boxes according to main axis</p>
+        <ul>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>space-between</li>
+            <li>space-around</li>
+            <li>space-evenly</li>
+        </ul>
+
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items item2">2</div>
+            <div class="items item3">3</div>
+            <div class="items item4">4</div>
+        </div>
+    </div>
+    <h3>align-items</h3>
+    <ul>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>stretch</li>
+        <li>baseline</li>
+    </ul>
+    <div class="align-items">
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items item2">2</div>
+            <div class="items item3">3</div>
+            <div class="items item4">4</div>
+        </div>
+    </div>
+    <h3>align-content</h3>
+    <p>values same as justify-content</p>
+    <div class="align-content">
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items item2">2</div>
+            <div class="items item3">3</div>
+            <div class="items item4">4</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
