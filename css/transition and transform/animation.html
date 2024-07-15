@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 150px;height: 150px;
+            animation-name: color;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            border: 1px solid;}
+        .box2{ width: 150px;height: 150px; 
+            animation-name: rollandrotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            /* animation-delay: 2s; */
+            /* animation-direction: alternate; */
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            border: 1px solid;}
+        .box2:hover{
+            animation-play-state: running;
+        }
+       @keyframes color{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: green;
+            }
+        }
+        @keyframes rollandrotate {
+            0%{
+
+            }
+            50%{
+                border-radius: 25%;
+                margin-left: 100px;
+            }
+            100%{
+                border-radius: 50%;
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class='box1'></div>
+    <div class='box2'></div>
+
+</body>
+</html>
