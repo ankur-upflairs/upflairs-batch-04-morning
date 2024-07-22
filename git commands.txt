@@ -1,0 +1,29 @@
+set up user 
+git config --global user.name "xyz"
+git config --global user.email "xyz@abc.com"
+---------
+create a empty repository
+
+initialize local folder
+------
+git init
+create a file
+git add .
+git commit -m "msg"
+git branch -M main
+git remote add origin https://github.com/username/new_repo
+git push -u origin master
+----------------
+commands to push everytime
+git add .
+git commit -m "msg"
+git push
+
+----------------
+cloning a repository
+git clone https://github.com/username/new_repo
+
+git add .
+git commit -m "msg"
+git push
+
