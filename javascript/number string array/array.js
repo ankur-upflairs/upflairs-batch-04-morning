@@ -2,7 +2,7 @@
 // console.log(arr[1])
 //indexing
 // console.log(arr.length)
-let arr=[1,2,3,5]
+// let arr=[1,2,3,5]
 // console.log(arr.concat([3,4]))
 // console.log(arr.includes(13))
 // console.log(arr.pop())//remove lase element
@@ -16,7 +16,7 @@ let arr=[1,2,3,5]
 // console.log(arr.slice(1))
 // console.log(arr.splice(1,0,23,12,56))
 // arr[10]=9
-console.log(arr)
+// console.log(arr)
 
 // for(let i in arr){
 //     console.log(i,arr[i])
@@ -33,10 +33,57 @@ console.log(arr)
 //ask no. from user and their friends name
 //print them in list
 // print 2d array in table 
+let arr=[1,2,3,4,5,6]
+// arr.forEach((value,index,array)=>{
+//     console.log(value)
+// })
 
+// document.write('<ul>')
+// arr.forEach((value,index,array)=>{
+// document.write(`<li>${value}</li>`)
+    
+// })
+// document.write('</ul>')
 
+// let doubleArr=arr.map((v,i)=>{
+//     return v*2
+// })
+// console.log(doubleArr)
+// let a=arr.every((v,i)=>v<5)
+// console.log(a)
+// let a=arr.some((v,i)=>v<5)
+// console.log(a)
 
+// console.log(arr.find(v=>v>4))
+// find return element that satify condition 
+// console.log(arr.findIndex(function(v){return v>2}))
+// findIndex return index of element that satify condition
 
+// let newArray=arr.filter((v,i)=>v>=3)
+// filter return an array of elements that satify condition 
+// console.log(newArray)
 
+// make an array of friends and filter friends that have 5 or more 
+//characters in theirs name and find if all names starts with 's'
+//find if any name starts with 's'
+// let friends=['pawan','gagan kumar','aman','sunil']
+
+// let filterFriends=friends.filter(v=>{
+//     return v.length>=5
+// })
+// console.log(filterFriends)
+// console.log(friends.every(v=>{
+//     return v.startsWith('s')
+// }))
+// console.log(friends.some(v=>{
+//     return v.startsWith('s')
+// }))
+let arr1=[1,20,3,45]
+// console.log(arr1.sort((a,b)=>b-a))
+
+let sum=arr1.reduce((accumalator,v,i,arr)=>{
+    return accumalator+v
+},0)
+console.log(sum)
 
 
