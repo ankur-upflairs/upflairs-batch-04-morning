@@ -33,7 +33,7 @@
 //ask no. from user and their friends name
 //print them in list
 // print 2d array in table 
-let arr=[1,2,3,4,5,6]
+// let arr=[1,2,3,4,5,6]
 // arr.forEach((value,index,array)=>{
 //     console.log(value)
 // })
@@ -78,12 +78,16 @@ let arr=[1,2,3,4,5,6]
 // console.log(friends.some(v=>{
 //     return v.startsWith('s')
 // }))
-let arr1=[1,20,3,45]
-// console.log(arr1.sort((a,b)=>b-a))
+// let arr1=[1,20,3,45]
+// // console.log(arr1.sort((a,b)=>b-a))
 
-let sum=arr1.reduce((accumalator,v,i,arr)=>{
-    return accumalator+v
-},0)
-console.log(sum)
+// let sum=arr1.reduce((accumalator,v,i,arr)=>{
+//     return accumalator+v
+// },0)
+// //v=1 acc=0 => 1
+// //20  1   =>21
+// //3  21  => 24
+// //45 24 => 69
+// // console.log(sum)
 
 

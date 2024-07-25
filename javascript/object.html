@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script >
+        //object is collection of key value pair
+         let person={
+            firstName:'sunil',
+            lastName:'kumar',
+            'rollNo':112,
+            isWoring:true,
+            friendsName:['gagan','rahul'],
+            contact:{
+                mobNo:12122323
+            },
+            fullName:function(){
+                return this.firstName+ " " + this.lastName
+            }
+         }
+         //dot notation
+         console.log(person.firstName)
+         //square notation
+         console.log(person['lastName'])
+         console.log(person['rollNo'])
+         console.log(person.fullName())
+         console.log(person.friendsName[1])
+         console.log(person.contact.mobNo)
+         //object to array
+         let obj=Object.entries({name:'sunil',age:23})
+         console.log(obj)
+        //array to object 
+         console.log(Object.fromEntries([['name','pankaj'],['age',25]]))
+        //  let person1=person//creates a reference
+        let person1=Object.assign({},person)
+
+        for(const key in person){
+            console.log(key,person[key])
+        }
+        
+    </script>
+</body>
+</html>
