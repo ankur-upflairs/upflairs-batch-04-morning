@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 50px;height: 50px;border: 1px solid;
+        position: absolute;
+        bottom: 70px;left: 100px;
+        border-radius: 50%;background-color: red;
+    }
+        .box2{ width: 400px;height: 20px;border: 1px solid;
+        position: absolute;
+        bottom: 50px;left: 100px;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class='box1'></div>
+    <div class='box2'></div>
+    <script>
+        let box1=document.querySelector('.box1')
+        let box2=document.querySelector('.box2')
+        let m=0
+        let up=true
+        setInterval(()=>{
+            if(up){
+                box1.style.transform=`translateY(${m}px)`
+                m--
+                up = m==-300?false:true
+            }
+            else{
+                box1.style.transform=`translateY(${m}px)`
+                m++
+                up= m==0?true:false
+            }
+        },10)
+    </script>
+</body>
+</html>

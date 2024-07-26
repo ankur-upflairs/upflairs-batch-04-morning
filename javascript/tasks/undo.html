@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>send</button>
+    <script>
+        let timer = 10
+        let sending = false
+        let interval;
+        let timeout;
+        document.querySelector('button').addEventListener('click', function () {
+            if (!sending) {
+
+                interval = setInterval(() => {
+                    this.innerText = `undo ${timer}`
+                    timer--;
+                }, 1000)
+                timeout = setTimeout(() => {
+                    clearInterval(interval)
+                    this.innerText = `send`
+                    sending = false
+                    alert('msg sent')
+                }, 10000)
+                sending = true
+            }
+
+            else {
+                clearInterval(interval)
+                clearTimeout(timeout)
+                this.innerText = `send`
+                sending = false
+                alert('msg cancelled')
+
+            }
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>

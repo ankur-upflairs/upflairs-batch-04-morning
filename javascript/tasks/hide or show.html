@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 150px;height: 150px;border: 1px solid;}
+    
+    </style>
+</head>
+<body>
+    <button>hide</button>
+    <div class='box1'></div>
+    <script>
+        let btn=document.querySelector('button')
+        let box=document.querySelector('.box1')
+        
+        btn.addEventListener('click',function(){
+            if(this.innerText=='hide'){
+                box.style.display='none'
+                this.innerText='show'
+            }
+            else{
+                 box.style.display='block'
+                this.innerText='hide'
+            }
+        })
+    </script>
+</body>
+</html>
