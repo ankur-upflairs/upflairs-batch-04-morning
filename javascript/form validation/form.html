@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <input type="text" id="name"><br>
+        <input type="text" id="email" >
+        <button>submit</button>
+    </form>
+    <script>
+        let form = document.getElementById('form')
+        form.addEventListener('submit', (e) => {
+            let name = document.querySelector('input').value
+            let email=document.getElementById('email').value
+            if (name.length < 4) {
+                alert('name must be have more than 4 letters')
+                e.preventDefault()
+            }
+            else if(!(email.includes('@') && email.includes('.'))){
+                alert('email must have @ and .')
+                e.preventDefault()
+                
+            }else  if((email.indexOf('.') - email.indexOf('@')) < 2){
+                
+            } 
+           
+        })
+        // console.dir(form)
+    </script>
+</body>
+
+</html>

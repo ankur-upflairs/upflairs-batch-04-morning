@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<a href="https://www.google.com" >click here</a>
+
+
+    <script>
+        let btn=document.querySelector('a')
+        function changeBg(event){
+            document.body.style.backgroundColor='darkgrey'
+            console.log(event)
+            console.log(event.target)
+            event.preventDefault()
+        }
+        btn.addEventListener('click',changeBg)
+        
+        document.body.addEventListener('keypress',(e)=>{
+            console.log(e)
+            btn.removeEventListener('click',changeBg)
+
+        })
+
+
+    </script>
+</body>
+</html>
