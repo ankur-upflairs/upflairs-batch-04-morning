@@ -1,0 +1,3 @@
+choose project =>
+decide pages that you want to display
+//home + allblogs + single blog page + create blog + login + signup + allblogs edit page
