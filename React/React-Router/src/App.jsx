@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Blogs from './pages/Blogs'
 import CreateBlog from './pages/CreateBlog'
 import Events from './pages/Events'
+import ConditionalRendering from './pages/ConditionalRendering'
 
 function App() {
  
@@ -27,6 +28,8 @@ function App() {
         <Route path='blogs' element={<Blogs/>}/>
         <Route path='createblog' element={<CreateBlog/>}/>
         <Route path='event' element={<Events/>}/>
+        <Route path='condition' element={<ConditionalRendering/>}/>
+
       </Routes>      
       </BrowserRouter>
     </>
