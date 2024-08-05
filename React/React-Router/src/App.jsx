@@ -30,8 +30,7 @@ function App() {
         <Route path='createblog' element={<CreateBlog/>}/>
         <Route path='event' element={<Events/>}/>
         <Route path='condition' element={<ConditionalRendering/>}/>
-        <Route path='login' element={<Login/>}/>
-
+        <Route path='login' element={<Login/>}/>        
       </Routes>      
       </BrowserRouter>
     </>
