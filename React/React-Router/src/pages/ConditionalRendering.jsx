@@ -7,8 +7,6 @@ function ConditionalRendering() {
     function showOrHide(){
         setShow(!show)
     }
-
-
     function changeTheme(){
         setDark(!dark)
         console.log(dark)        
@@ -21,6 +19,7 @@ function ConditionalRendering() {
       <button onClick={changeTheme}>{dark?'dark':'white'}</button>
       <button onClick={showOrHide}>{show? 'hide':'show'}</button>
       <div className={show ? 'box show': 'hide'}></div>
+
       {/* <div style={{
         width:'150px',height:'150px',border:'1px solid',
         display:show ?'block':'none'
