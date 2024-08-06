@@ -25,7 +25,6 @@ function TodoList() {
             <input type="text" name='task' onChange={(e) => setTask(e.target.value)} value={task} />
             <button onClick={addTodo}>add Task</button>
             <ol>
-
                 {toDo.map((v, i) => {
                     return <li key={i}>{v} <button onClick={() => deleteTask(i)}>delete</button>
                         {updateTask == i ? <>
