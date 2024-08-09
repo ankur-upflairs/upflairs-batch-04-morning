@@ -1,0 +1,17 @@
+pages=>
+home,blogs,single blog ,create blog,contact us, about
+
+user =>signup,login,crud
+
+=> setup routes
+
+blog_post =>structure =>
+
+post =>[
+    {id:1,title:'react',body:'xyz',author:'user's Name, date :'23 march',image:''}
+]
+
+user=[{name,email,image,profession,age}]
+
+
+
