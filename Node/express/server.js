@@ -4,6 +4,15 @@ const app = express()
 const postRoutes=require('./routes/postRoutes.js')
 const userRoutes=require('./routes/userRoutes.js')
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+
+// app.use('/post',(req, res, next) => {
+//     console.log(req.ip,req.method,req.path)
+//     next()
+// })
+
 app.use('/post',postRoutes)
 app.use('/user',userRoutes)
 

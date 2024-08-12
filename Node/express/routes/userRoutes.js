@@ -1,13 +1,10 @@
 const express=require('express')
 const router=express.Router()
+let {signup,login}=require('../controllers/userController.js')
 
-router.post('/signup',(req,res)=>{
-    res.json({massage:"user created"})
-})
+router.post('/signup',signup)
 
-router.post('/login',(req,res)=>{
-    res.json({massage:"user authenticated"})
-})
+router.post('/login',login)
 
 module.exports=router
 

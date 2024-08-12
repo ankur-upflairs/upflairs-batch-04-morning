@@ -1,33 +1,14 @@
 const express=require('express')
 let router=express.Router()
+let {getAllPost, getSinglePost, createPost, updatePost, deletePost}=require('../controllers/postController.js')
 
-
-router.get('/', (req, res) => {
-    //get all posts from data base and send them
-    res.json({ posts: 'this is all posts' })
-})
+router.get('/', getAllPost)
 //to get single post
-router.get('/:id', (req, res) => {
-    let params=req.params
-    //get single post from data base and send them
-
-    res.json({ message: `this is post with id ${params.id}`})
-})
+router.get('/:id',getSinglePost)
 //to a create a post
-router.post('/', (req, res) => {
-    //extract data and save it to db
-    res.json({ message: 'post added' })
-})
-router.put('/:id', (req, res) => {
-    let {id}=req.params
-    //extract data and update it to db  
-    res.json({ message: 'post updated' })
-})
-router.delete('/:id', (req, res) => {
-    let {id}=req.params
-    //to delete the data
-    res.json({ message: 'post deleted' })
-})
+router.post('/',createPost )
+router.put('/:id',updatePost)
+router.delete('/:id', deletePost)
 
 
 module.exports=router
