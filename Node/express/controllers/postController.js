@@ -1,25 +1,54 @@
+let Post=require('../models/postModel')
 
-exports.getAllPost=(req, res) => {
-    //get all posts from data base and send them
-    res.json({ posts: 'this is all posts' })
+
+exports.getAllPost=async (req, res) => {
+    try {
+        let posts=await Post.find({})
+        res.json({status:"success",posts:posts})
+    } catch (error) {
+        res.json({status:"failed",message:error.message})
+    }
+    
 }
-exports.getSinglePost=(req, res) => {
-    let params=req.params
-    //get single post from data base and send them
-    res.json({ message: `this is post with id ${params.id}`})
+exports.getSinglePost=async (req, res) => {
+    let {id}=req.params
+    try {
+        let post=await Post.findById(id)
+        res.json({status:"success",post:post})
+    } catch (error) {
+        res.json({status:"failed",message:error.message})
+    }
 }
-exports.createPost=(req, res) => {
-    //extract data and save it to db
-    res.json({ message: 'post added' })
+exports.createPost=async (req, res) => {
+    // console.log(req.body)
+    let user='Admin'
+    let {title,body}=req.body
+    let image='images' + '/' +req.file.filename
+    // console.log(req.file,image)
+    try {
+        await Post.create({title,body,user,image})
+        res.json({status:"success",message:"post created"})
+    } catch (error) {
+        res.json({status:"failed",message:error.message})
+    }
 }
 exports.updatePost=(req, res) => {
     let {id}=req.params
-    //extract data and update it to db  
-    res.json({ message: 'post updated' })
+    let {title,body,user,image}=req.body
+    try {
+        Post.findByIdAndUpdate(id,{title,body,user,image})
+        res.json({status:"success",message:"post updated"})
+    } catch (error) {
+        res.json({status:"failed",message:error.message})
+    }
 }
-exports.deletePost=(req, res) => {
+exports.deletePost=async (req, res) => {
     let {id}=req.params
-    //to delete the data
-    res.json({ message: 'post deleted' })
+    try {
+        await Post.findByIdAndDelete(id)
+        res.json({status:"success",message:"post deleted"})
+    } catch (error) {
+        res.json({status:"failed",message:error.message})
+    }
 }
 

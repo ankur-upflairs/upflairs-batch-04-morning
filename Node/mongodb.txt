@@ -1,0 +1,8 @@
+sql  => nosql
+table - collection
+row   -  document
+column - fields
+
+commands =>  show dbs
+ use posts
+ 

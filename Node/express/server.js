@@ -3,10 +3,20 @@ const express = require('express')
 const app = express()
 const postRoutes=require('./routes/postRoutes.js')
 const userRoutes=require('./routes/userRoutes.js')
+const mongoose=require('mongoose')
+const cors=require('cors')
+const path=require('path')
 
+// app.use(cors({
+//     origin:'*',
+//     methods:['GET','POST','PUT','DELETE'],
+//     allowedHeaders:['Content-Type']
+// }))
+app.use(cors())
+mongoose.connect('mongodb://localhost:27017/blog')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-
+app.use(express.static(path.join(__dirname,'static')))
 
 // app.use('/post',(req, res, next) => {
 //     console.log(req.ip,req.method,req.path)
